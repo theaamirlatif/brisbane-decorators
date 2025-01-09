@@ -26,7 +26,7 @@ body {
 /* Hero Section */
 .hero-section {
     position: relative;
-    background-image: url('./assets/images/hero-bg.png');
+    background-image: url('https://decorators.bondcleanbrisbane.au/wp-content/themes/hello-elementor/assets/images/balloon-bg.png');
     background-size: cover;
     background-position: center;
     display: flex;
@@ -71,6 +71,7 @@ body {
 
 .menu ul li {
     margin-right: 20px;
+    position: relative; /* Position relative for submenu */
 }
 
 .menu ul li a {
@@ -84,12 +85,49 @@ body {
     line-height: 19.59px;
     letter-spacing: 0.02em;
     text-align: left;
-
 }
 
 .menu ul li a:hover {
+    color: #FFC0CB; /* Highlight on hover */
+}
+
+/* Submenu Styling */
+ul.submenu {
+    display: none; /* Hide submenu by default */
+    position: absolute;
+    top: 100%;
+    width: 240px;
+    left: 0;
+    background-color: #fff;
+    list-style-type: none;
+    padding: 10px 0;
+    border: 1px solid #ddd;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    z-index: 10;
+}
+
+.services:hover .submenu {
+    display: block; /* Show submenu when hovering over the 'Services' menu item */
+}
+
+ul.submenu li {
+    padding: 10px 20px 10px 20px;
+}
+
+ul.submenu li:hover {
+    padding: 10px 20px 10px 25px;
+    transition: padding 0.3s ease;
+}
+
+ul.submenu li a {
+    color: #000;
+    font-size: 18px;
+    text-transform: uppercase;
+}
+
+ul.submenu li a:hover {
     color: #FFC0CB;
-    /* Highlight on hover */
+    
 }
 
 /* Logo Styling */
@@ -149,20 +187,177 @@ body {
     text-align: center;
 }
 
+/* event baloons */
+.ln-event-blns {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.ln-eb-child {
+    width: 90%;
+    display: flex;
+    margin-top: 100px;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.ln-eb-sub-child {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin: 40px 0px 0px 0px;
+}
+
+.ln-eb-left {
+    width: 52%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+
+.ln-eb-left h1 {
+    font-family: Elsie;
+    font-size: 48px;
+    font-weight: 600;
+    text-transform: uppercase;
+    margin: 0px 0px 10px 0px;
+    line-height: 52.8px;
+    letter-spacing: -0.03em;
+    text-align: left;
+    color: #000;
+}
+
+.rating-feedback {
+    border-radius: 8px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 30px;
+    background-color: #FFC0CB80;
+    padding: 10px;
+    margin: 10px 0px;
+}
+
+.checked {
+  color: orange;
+}
+
+.txts {
+    font-family: Kumbh Sans;
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 31px;
+    text-align: left;
+}
+
+.splash-texts {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+    padding: 10px;
+}
+
+.single-text {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+
+.single-text img {
+    height: 30px;
+}
+
+.single-text h4 {
+    font-family: Oswald;
+    font-size: 18px;
+    font-weight: 700;
+    line-height: 25px;
+    text-align: left;
+}
+
+.ln-eb-left p {
+    font-family: PT Sans;
+    font-size: 22px;
+    font-weight: 400;
+    line-height: 28.47px;
+    text-align: left;
+    color: #414141;
+    margin: 10px 0px;
+    padding: 0px;
+}
+
+.highlight {
+    font-family: PT Sans;
+    font-size: 22px;
+    font-weight: 700;
+    line-height: 28.51px;
+    text-align: left;
+    color: #FF2688;
+    margin: 10px 0px;
+}
+
+.ln-eb-left form {
+    width: 85%;
+    margin: 10px 0px;
+}
+
+
+.ln-eb-left form input {
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #CACACA;
+    background-color: #E8E6E6;
+    border-radius: 50px;
+    font-family: Elsie;
+    font-size: 21px;
+    font-weight: 400;
+    line-height: 19.59px;
+    letter-spacing: 0.02em;
+    text-align: left;
+    margin: 10px 0px;
+}
+
+.ln-eb-right {
+    width: 44%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+
+.ln-eb-right img {
+    width: 100%;
+}
+
+.more-images{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+    margin-top: 30px;
+}
+
 /* Hero Banner Content */
 .hero-content {
     text-align: center;
     position: relative;
     z-index: 2;
     margin: 0 auto;
-    margin-top: 80px;
+    margin-top: 20px;
     /* Adjust padding to center text */
 }
 
 .hero-content h1 {
     font-size: 48px;
     font-weight: 500;
-    margin-bottom: 20px;
+    margin: 30px 0px 10px 0px;
     font-family: Elsie;
     text-transform: uppercase;
     letter-spacing: -0.03em;
@@ -235,17 +430,19 @@ body {
 .eb-child {
     width: 90%;
     display: flex;
+    padding: 60px 0px;
     flex-direction: column;
     justify-content: center;
     align-items: center;
 }
 
 .eb-child h2 {
+    width: 100%;
     font-family: Elsie;
     font-size: 48px;
-    font-weight: 400;
+    font-weight: 600;
     line-height: 52.8px;
-    margin: 20px 0px;
+    margin: 0px 0px 20px 0px;
     letter-spacing: -0.03em;
     text-align: left;
     color: #000;
@@ -266,7 +463,7 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: flex-start;
-    margin: 30px 0px;
+    margin: 40px 0px 0px 0px;
 }
 
 .eb-left {
@@ -279,7 +476,7 @@ body {
 .eb-left h2 {
     font-family: Elsie;
     font-size: 48px;
-    font-weight: 400;
+    font-weight: 600;
     margin: 0px 0px 10px 0px;
     line-height: 52.8px;
     letter-spacing: -0.03em;
@@ -313,6 +510,113 @@ body {
 
 .eb-right img {
     width: 100%;
+}
+
+/* event-plan-cat  */
+.event-plan-cat {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.event-plan-cat-child {
+    width: 85%;
+    display: flex;
+    padding-bottom: 50px;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.event-plan-cat-child span {
+    font-family: PT Sans;
+    font-size: 24px;
+    padding: 0px;
+    margin: 0px;
+    font-weight: 500;
+    color: #414141;
+    line-height: 20.06px;
+    text-align: center;
+}
+
+.event-plan-cat-child h2 {
+    width: 90%;
+    font-family: Elsie;
+    font-size: 48px;
+    margin-top: 15px;
+    font-weight: 900;
+    line-height: 57.17px;
+    text-align: center;
+    color: #13031F;
+}
+
+.lu-products {
+  width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+  align-items: center;
+    gap: 20px;
+}
+
+.product {
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    width: calc(33% - 20px);
+    text-align: left;
+}
+
+.product-img {
+    width: 100%;
+    max-height: 330px; 
+    object-fit: cover;
+    object-position: center;
+    border-radius: 8px;
+    margin-bottom: 15px;
+}
+
+.product-title {
+    font-size: 24px;
+    margin-bottom: 10px;
+    font-family: Elsie;
+    color: #000;
+    font-weight: 600;
+    font-size: 24px;
+    display: -webkit-box;
+    -webkit-line-clamp: 2; /* Limit to 2 lines */
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    height: 2.5em;
+}
+
+.product-price {
+    font-size: 1.3rem;
+    color: #333;
+    margin-bottom: 15px;
+    font-weight: 400;
+}
+
+.checkout-btn {
+    background-color: #FFA3B3;
+    color: white;
+    border: none;
+    font-weight: 600;
+    text-transform: uppercase;
+    font-family: Elsie;
+    font-size: 18px;
+    padding: 10px 40px;
+    border-radius: 50px;
+    cursor: pointer;
+    width: auto;
+}
+
+.checkout-btn:hover {
+    background-color: #FF8C96;
+    color: white;
 }
 
 /* reviews  */
@@ -398,7 +702,7 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-top: 40px;
+    margin: 0px 0px 60px 0px;
 }
 
 .occations-child {
@@ -410,7 +714,7 @@ body {
 
 .oc-left {
     width: 40%;
-    height: 380px;
+    height: 420px;
     margin-right: -50px;
     padding: 20px 30px;
     margin-top: 100px;
@@ -435,7 +739,7 @@ body {
     justify-content: flex-start;
     gap: 100px;
     margin-left: 30px;
-    align-items: center;
+    align-items: flex-start;
 }
 
 .oc-left ul {
@@ -554,7 +858,6 @@ button:hover {
     display: flex;
     justify-content: center;
     align-items: center;
-    padding: 50px 0px;
 }
 
 .service-form-child {
@@ -631,6 +934,7 @@ button:hover {
 }
 
 .guest-dropdown {
+    width: 100%;
     position: relative;
     display: flex;
     justify-content: space-between;
@@ -649,6 +953,7 @@ button:hover {
 }
 
 .guest-dropdown .dropdown-placeholder {
+    width: 70%;
     font-size: 16px;
     color: #777777;
     background-color: #E8E6E6;
@@ -660,9 +965,11 @@ button:hover {
 }
 
 .guest-dropdown select {
+    width: 25%;
     padding: 10px;
     font-size: 16px;
     border-radius: 5px;
+    text-align: left !important;
     appearance: none;
     background-color: white;
     background-image: url('data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20viewBox%3D%220%200%2024%2024%22%3E%3Cpath%20fill%3D%22none%22%20d%3D%22M7%2010l5%205%205-5H7z%22/%3E%3C/svg%3E');
@@ -721,7 +1028,7 @@ button:hover {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    align-items: center;
+    align-items: flex-start;
     gap: 5px;
 }
 
@@ -836,6 +1143,7 @@ button:hover {
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    padding-top: 60px;
 }
 
 .ds-reviews-slider-child span {
@@ -899,6 +1207,7 @@ button:hover {
 }
 
 .review-header-content {
+    width: 65%;
     margin-left: 20px;
     display: flex;
     flex-direction: column;
@@ -952,7 +1261,7 @@ button:hover {
 .footer-child {
     width: 90%;
     display: flex;
-    padding: 50px 0px 0px 0px;
+    padding: 60px 0px 0px 0px;
     flex-wrap: wrap;
     justify-content: space-between;
     align-items: flex-start;
@@ -976,6 +1285,23 @@ button:hover {
     margin: 20px 0px 0px 20px;
 }
 
+.flogo ul {
+    list-style-type: none;
+    padding: 0px;
+    margin: 0px;
+}
+
+.flogo ul li {
+    font-family: PT Sans;
+    font-size: 14px;
+    font-weight: 400;
+    padding: 5px 0px;
+    line-height: 20px;
+    letter-spacing: 0.02em;
+    text-align: left;
+    color: white;
+}
+
 .fcall {
     width: 20%;
 }
@@ -996,19 +1322,18 @@ button:hover {
 }
 
 .fcall ul li {
+    width: 100%;
     font-family: Elsie;
-    font-size: 30px;
+    font-size: 20px;
     font-weight: 400;
-    margin: 10px 0px 0px 0px;
-    line-height: 27.99px;
+    margin: 15px 0px 0px 0px;
+    line-height: 25px;
     letter-spacing: 0.02em;
     text-align: left;
     color: white;
 }
 
 .fcall hr {
-    width: Hug (182px)px;
-    height: Hug (66px)px;
     padding: 5px 3px 5px 3px;
     gap: 10px;
     border: 2px;
@@ -1037,7 +1362,7 @@ button:hover {
 
 .flinks ul li {
     font-family: PT Sans;
-    font-size: 20px;
+    font-size: 18px;
     font-weight: 400;
     padding: 5px 0px;
     line-height: 22.2px;
@@ -1111,11 +1436,9 @@ button:hover {
     .header-content {
         display: flex;
         justify-content: space-between;
-        /* Space between left, center, and right elements */
         align-items: center;
         margin: 0 auto;
         padding: 10px 0px;
-        /* Padding for spacing */
     }
 
     .checkbtn {
@@ -1130,16 +1453,15 @@ button:hover {
     }
 
     .logo img {
-        width: 130px;
+        width: 100px;
         margin-left: 70px;
     }
-
 
     /* bcs header Styles for the toggle button */
     .menu {
         position: fixed;
         z-index: 999;
-        width: 80%;
+        width: 100%;
         height: 100vh;
         background: rgba(255, 255, 255, 1);
         top: 0;
@@ -1149,7 +1471,7 @@ button:hover {
         text-align: left;
         overflow-x: hidden;
         overflow-y: hidden;
-        margin-top: 100px;
+        margin-top: 120px;
     }
 
     .menu ul {
@@ -1179,7 +1501,7 @@ button:hover {
     }
 
     .menu ul li a:hover {
-        color: #006400;
+        color: #FFC0CB;
     }
 
     .social-source ul {
@@ -1187,7 +1509,7 @@ button:hover {
     }
 
     .get-qoute a {
-        padding: 10px 30px;
+        padding: 10px 20px;
         border-radius: 50px;
         border: 1px solid #000;
         font-weight: bold;
@@ -1197,7 +1519,7 @@ button:hover {
         font-size: 16px;
         text-transform: uppercase;
         font-weight: 500;
-        line-height: 24.2px;
+        line-height: 20px;
         text-align: center;
     }
 
@@ -1222,10 +1544,237 @@ button:hover {
         display: block;
     }
 
-    .hero-content h1 {
-        font-size: 3px;
-        margin-bottom: 15px;
+    /* Adjustments for submenu on mobile */
+    .menu ul li.services {
+        position: relative; /* To hold submenu */
+    }
+
+    ul.submenu {
+        display: none; /* Hide submenu by default */
+        position: absolute;
+        top: 0; /* Place submenu below the "Services" item */
+        left: 0;
+        width: 250px; /* Take up full width of menu */
+        background-color: #fff;
+        list-style-type: none;
+        padding: 10px 0;
+        margin: 60px 0px 0px 40px;
+        border: 1px solid #ddd;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        z-index: 10;
+    }
+
+    .menu ul li.services:hover .submenu {
+        display: block; /* Display submenu on hover in desktop, but we'll make this work differently on mobile */
+    }
+
+    /* Mobile: Show submenu on click */
+    .menu ul li.services:focus-within .submenu, 
+    .menu ul li.services:active .submenu {
+        display: block;
+    }
+
+    ul.submenu li {
+        padding: 10px 15px 10px 15px;
+        font-size: 16px;
+        color: #000;
+        text-transform: uppercase;
+    }
+
+    ul.submenu li:hover {
+        padding: 10px 15px 10px 20px;
+        transition: padding 0.3s ease;
+    }
+
+    ul.submenu li a {
+        color: #000;
+        font-size: 16px;
+        padding: 5px 20px;
+        text-transform: uppercase;
+    }
+
+    ul.submenu li a:hover {
+        color: #FFC0CB;
+    }
+
+    /* For mobile, ensure the submenu is shown when the menu is open */
+    .menu ul li.services > a:after {
+        content: ' ▼'; /* Add an arrow for submenu items */
+        font-size: 12px;
+    }
+    
+    /* event baloons */
+    .ln-event-blns {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: wrap;
+    }
+    
+    .ln-eb-child {
+        width: 90%;
+        display: flex;
+        margin-top: 50px;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    
+    .ln-eb-sub-child {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: 40px 0px 0px 0px;
+        flex-wrap: wrap;
+    }
+    
+    .ln-eb-left {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+    }
+    
+    .ln-eb-left h1 {
+        width: 100%;
+        font-family: Elsie;
+        font-size: 30px;
+        font-weight: 600;
+        text-transform: uppercase;
+        margin: 30px 0px 10px 0px;
+        line-height: 30px;
+        letter-spacing: -0.03em;
+        text-align: left;
+        color: #000;
+    }
+    
+    .rating-feedback {
+        width: 100%;
+        border-radius: 8px;
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        gap: 10px;
+        background-color: #FFC0CB80;
+        padding: 10px 5px;
+        margin: 10px 0px;
+    }
+    
+    .checked {
+      color: orange;
+    }
+    
+    .txts {
+        font-family: Kumbh Sans;
+        font-size: 15px;
+        font-weight: 400;
+        line-height: 31px;
+        text-align: left;
+    }
+    
+    .splash-texts {
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        gap: 0px;
+        padding: 10px 0px;
+    }
+    
+    .single-text {
+        width: 30%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 10px;
+    }
+    
+    .single-text img {
+        height: 30px;
+    }
+    
+    .single-text h4 {
+        font-family: Oswald;
+        font-size: 15px;
+        font-weight: 700;
+        line-height: 20px;
+        text-align: left;
+    }
+    
+    .ln-eb-left p {
+        width: 100%;
+        font-family: PT Sans;
+        font-size: 18px;
+        font-weight: 400;
+        line-height: 20px;
+        text-align: left;
+        color: #414141;
+        margin: 10px 0px;
+        padding: 0px;
+    }
+    
+    .highlight {
+        font-family: PT Sans;
+        font-size: 18px;
+        font-weight: 700;
+        line-height: 28.51px;
+        text-align: left;
+        color: #FF2688;
+        margin: 10px 0px;
+    }
+    
+    .ln-eb-left form {
+        width: 100%;
+        margin: 10px 0px 8px 0px;
+    }
+    
+    
+    .ln-eb-left form input {
+        padding: 10px;
+        font-size: 16px;
+        border: 1px solid #CACACA;
+        background-color: #E8E6E6;
+        border-radius: 50px;
+        font-family: Elsie;
+        font-size: 21px;
+        font-weight: 400;
+        line-height: 19.59px;
+        letter-spacing: 0.02em;
+        text-align: left;
+        margin: 10px 0px;
+    }
+    
+    .ln-eb-right {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+    }
+    
+    .ln-eb-right img {
+        width: 100%;
+    }
+    
+    .more-images {
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        gap: 10px;
         margin-top: 30px;
+    }
+    
+    .more-images img {
+        width: 100px;
+        height: 100px;
+    }
+
+    .hero-content h1 {
+        font-size: 30px;
+        margin-bottom: 15px;
+        margin-top: 20px;
         line-height: 35px;
     }
 
@@ -1243,6 +1792,7 @@ button:hover {
 
     .hero-bot-btn {
         margin-top: -30px;
+        padding-bottom: 0px;
     }
 
     .hero-img img {
@@ -1283,9 +1833,9 @@ button:hover {
     .eb-child h2 {
         font-family: Elsie;
         font-size: 30px;
-        font-weight: 400;
+        font-weight: 600;
         line-height: 35px;
-        margin: 10px 0px;
+        margin: 0px 0px 10px 0px;
         letter-spacing: -0.03em;
         text-align: left;
         color: #000;
@@ -1308,7 +1858,7 @@ button:hover {
         flex-direction: column-reverse;
         justify-content: space-between;
         align-items: flex-start;
-        margin: 30px 0px;
+        margin: 30px 0px 0px 0px;
     }
 
     .eb-left {
@@ -1321,7 +1871,7 @@ button:hover {
     .eb-left h2 {
         font-family: Elsie;
         font-size: 30px;
-        font-weight: 400;
+        font-weight: 600;
         margin: 0px 0px 10px 0px;
         line-height: 35px;
         letter-spacing: -0.03em;
@@ -1357,6 +1907,108 @@ button:hover {
         width: 100%;
         margin-bottom: 20px;
     }
+    
+    /* event-plan-cat  */
+    .event-plan-cat {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    
+    .event-plan-cat-child {
+        width: 85%;
+        display: flex;
+        padding-bottom: 50px;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+    }
+    
+    .event-plan-cat-child span {
+        width: 100%;
+        font-family: PT Sans;
+        font-size: 18px;
+        padding: 0px;
+        margin: 0px;
+        font-weight: 500;
+        color: #414141;
+        line-height: 20.06px;
+        text-align: left;
+    }
+    
+    .event-plan-cat-child h2 {
+        width: 100%;
+        font-family: Elsie;
+        font-size: 30px;
+        margin-top: 15px;
+        font-weight: 900;
+        line-height: 35.17px;
+        text-align: left;
+        color: #13031F;
+    }
+    
+    .lu-products {
+        width: 100%;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+        gap: 20px;
+    }
+    
+    .product {
+        background-color: #fff;
+        border-radius: 8px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        padding: 20px;
+        width: calc(100% - 20px);
+        text-align: left;
+    }
+    
+    .product-img {
+        width: 100%;
+        max-height: 330px; 
+        object-fit: cover;
+        object-position: center;
+        border-radius: 8px;
+        margin-bottom: 15px;
+    }
+    
+    .product-title {
+        font-size: 24px;
+        margin-bottom: 10px;
+        font-family: Elsie;
+        color: #000;
+        font-weight: 600;
+        font-size: 24px;
+    }
+    
+    .product-price {
+        font-size: 1.3rem;
+        color: #333;
+        margin-bottom: 15px;
+        font-weight: 400;
+    }
+    
+    .checkout-btn {
+        background-color: #FFA3B3;
+        color: white;
+        border: none;
+        font-weight: 600;
+        text-transform: uppercase;
+        font-family: Elsie;
+        font-size: 18px;
+        padding: 10px 40px;
+        border-radius: 50px;
+        cursor: pointer;
+        width: auto;
+    }
+    
+    .checkout-btn:hover {
+        background-color: #FF8C96;
+        color: white;
+    }
 
     /* reviews  */
     .ss-reviews-slider {
@@ -1389,7 +2041,7 @@ button:hover {
         font-family: Elsie;
         font-size: 30px;
         font-weight: 900;
-        margin: 10px 0px;
+        margin: 0px 0px 10px 0px;
         line-height: 35px;
         text-align: left;
         color: #13031F;
@@ -1478,7 +2130,7 @@ button:hover {
         display: flex;
         justify-content: center;
         align-items: center;
-        padding: 0px 0px 40px 0px;
+        padding: 0px;
     }
 
     .service-form-child {
@@ -1646,7 +2298,7 @@ button:hover {
         display: flex;
         flex-direction: column;
         justify-content: flex-start !important;
-        align-items: center;
+        align-items: flex-start;
         gap: 5px;
     }
 
@@ -1654,24 +2306,19 @@ button:hover {
         font-family: PT Sans;
         font-size: 16px;
         font-weight: 700;
-        line-height: 24.84px;
+        line-height: 20px;
         margin: 0px;
         text-align: left;
-        text-underline-position: from-font;
-        text-decoration-skip-ink: none;
     }
 
     .text-p p {
         font-family: Fira Sans;
-        font-size: 20px;
+        font-size: 16px;
         font-weight: 700;
         margin: 0px;
-        line-height: 30.72px;
+        line-height: 20px;
         text-align: left;
         color: #FFA3B3;
-        text-underline-position: from-font;
-        text-decoration-skip-ink: none;
-
     }
 
     .submit-btn {
@@ -1756,10 +2403,10 @@ button:hover {
     } 
 
     .occations-child {
-        width: 90%;
+        width: 100%;
         display: flex;
         flex-wrap: wrap;
-        gap: 30px;
+        gap: 0px;
         justify-content: center;
         align-items: center;
     }
@@ -1768,11 +2415,11 @@ button:hover {
         width: 100%;
         height: auto;
         margin-right: 0px;
-        padding: 20px 10px;
+        padding: 20px 20px;
         margin-top: 0px;
         background-color: #FFA3B3;
         z-index: 150;
-        border-bottom-right-radius: 50px;
+        border-bottom-right-radius: 0px;
     }
 
     .oc-left h2 {
@@ -1792,7 +2439,7 @@ button:hover {
         justify-content: flex-start;
         gap: 50px;
         margin-left: 30px;
-        align-items: center;
+        align-items: flex-start;
     }
 
     .oc-left ul {
@@ -1820,28 +2467,27 @@ button:hover {
         width: 100%;
         z-index: 99;
         overflow: hidden;
-        padding-bottom: 50px;
+        padding-bottom: 20px;
 
     }
 
     .slider {
         width: 100%;
         display: flex;
-
         transition: transform 0.5s ease;
-
     }
 
     .slider img {
         width: 100%;
         height: 100%;
+        background-color: #FFA3B3;
     }
 
     .slider-buttons {
         position: absolute;
         bottom: 10px;
-        left: 50%;
-        bottom: 30px;
+        left: 30%;
+        bottom: 0px;
         transform: translateX(-50%);
         display: flex;
         z-index: 100;
@@ -2024,7 +2670,6 @@ button:hover {
         width: 100%;
         background-color: #232323;
         display: flex;
-        margin-top: 40px;
         flex-direction: column;
         justify-content: center;
         align-items: center;
@@ -2084,10 +2729,10 @@ button:hover {
 
     .fcall ul li {
         font-family: Elsie;
-        font-size: 30px;
+        font-size: 20px;
         font-weight: 400;
         margin: 10px 0px 0px 0px;
-        line-height: 27.99px;
+        line-height: 20px;
         letter-spacing: 0.02em;
         text-align: left;
         color: white;
@@ -2207,9 +2852,9 @@ button:hover {
     }
 
     .hero-top-btn {
-        padding: 8px 35px;
-        font-size: 18px;
-        margin-bottom: -35px;
+        padding: 7px 47px;
+        font-size: 16px;
+        margin-bottom: -37px;
     }
 
     .hero-bot-btn {
@@ -2221,5 +2866,17 @@ button:hover {
         /* Smaller padding */
         font-size: 14px;
         /* Smaller font size */
+    }
+}
+
+/* Additional tweaks for smaller screens */
+@media screen and (max-width: 360px) {
+    .hero-content h1 {
+        font-size: 26px;
+    }
+    .hero-top-btn {
+        padding: 5px 35px;
+        font-size: 16px;
+        margin-bottom: -33px;
     }
 }
